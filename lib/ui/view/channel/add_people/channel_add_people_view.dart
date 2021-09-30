@@ -126,12 +126,12 @@ class ChannelAddPeopleView extends StatelessWidget {
                                 ):Container(
 
                                 ),
-                              ),
-                              // if (viewModel.matchingUsers[index].)
+                              ), // if (viewModel.matchingUsers[index].)
                               //   CircleAvatar(
                               //     backgroundColor: AppColors.zuriPrimaryColor,
                               //     radius: 4.0,
                               //   ),
+
                             ],
                           ),
                           SizedBox(width: 20.0),

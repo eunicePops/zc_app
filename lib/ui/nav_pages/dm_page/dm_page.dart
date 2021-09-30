@@ -14,6 +14,7 @@ class DmPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<DmPageViewModel>.reactive(
+    onModelReady: (model)  => model.init(),
       builder: (context, model, child) {
         return Scaffold(
           appBar: AppBar(

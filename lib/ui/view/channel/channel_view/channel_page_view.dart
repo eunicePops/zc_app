@@ -64,11 +64,12 @@ class ChannelPageView extends StatelessWidget {
             ],
           ),
           body:
-              // body: model.isLoading
-              //     ? Center(
-              //         child: CircularProgressIndicator(),
-              //       )
-              //     :
+              /*body:
+               model.isLoading
+                   ? Center(
+                    child: CircularProgressIndicator(),
+                 )
+                   :*/
               Column(
             children: [
               Expanded(
