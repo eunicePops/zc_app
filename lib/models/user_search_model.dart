@@ -23,6 +23,7 @@ class UserSearch {
   String? lastName;
   String? orgId;
 <<<<<<< HEAD
+<<<<<<< HEAD
   String? phone;
   bool presence;
 =======
@@ -32,6 +33,12 @@ class UserSearch {
   String? phone;
   String? presence;
 >>>>>>> upstream/dev
+=======
+
+  //TODO Change back to normal type phone and presence and speak with backend
+  String? phone;
+  String? presence;
+>>>>>>> addpeople
   String? pronouns;
   String? role;
   dynamic settings;
@@ -78,7 +85,7 @@ class UserSearch {
         lastName: json['last_name'],
         orgId: json['org_id'],
         phone: json['phone'],
-        presence: json['presence'] == "true",
+        presence: json['presence'],
         pronouns: json['pronouns'],
         role: json['role'],
         settings: json['settings'],

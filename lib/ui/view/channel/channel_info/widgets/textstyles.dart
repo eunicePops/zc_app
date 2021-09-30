@@ -24,16 +24,20 @@ TextStyle descriptionStyle() {
 
 TextStyle faintTextStyle() {
 <<<<<<< HEAD
+<<<<<<< HEAD
   return TextStyle(
 
 =======
   return const TextStyle(
 >>>>>>> upstream/dev
+=======
+  return const TextStyle(
+>>>>>>> addpeople
       fontSize: 14, fontWeight: FontWeight.w600, color: AppColors.borderColor);
-
 }
 
 TextStyle archiveTextStyle() {
+<<<<<<< HEAD
 <<<<<<< HEAD
   return TextStyle(
       fontSize: 15,
@@ -43,6 +47,10 @@ TextStyle archiveTextStyle() {
   return const TextStyle(
       fontSize: 15, fontWeight: FontWeight.w600, color: AppColors.redColor);
 >>>>>>> upstream/dev
+=======
+  return const TextStyle(
+      fontSize: 15, fontWeight: FontWeight.w600, color: AppColors.redColor);
+>>>>>>> addpeople
 }
 
 TextStyle greenTextStyle() {

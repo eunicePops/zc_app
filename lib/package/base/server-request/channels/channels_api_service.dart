@@ -201,6 +201,7 @@ class ChannelsApiService {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 getChannelMembers(id) async{
   String orgId = _userService.currentOrgId;
   try{
@@ -214,6 +215,9 @@ getChannelMembers(id) async{
   catch(e){
     print(e);
 =======
+=======
+
+>>>>>>> addpeople
   getChannelMembers(id) async {
     String orgId = _userService.currentOrgId;
     try {
@@ -229,7 +233,11 @@ getChannelMembers(id) async{
     } catch (e) {
       log.e(e);
     }
+<<<<<<< HEAD
 >>>>>>> upstream/dev
+=======
+
+>>>>>>> addpeople
   }
 
   Future<void>? dispose() {

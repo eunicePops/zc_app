@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:hng/ui/shared/colors.dart';
-import 'package:hng/ui/shared/styles.dart';
 import 'package:stacked/stacked.dart';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import 'app/data.dart';
 import 'app/drafted_item_widget.dart';
 =======
 >>>>>>> upstream/dev
+=======
+>>>>>>> addpeople
 import 'draft_viewmodel.dart';
 
 class DraftView extends StatelessWidget {
@@ -16,6 +17,7 @@ class DraftView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<DraftViewModel>.reactive(
+<<<<<<< HEAD
 <<<<<<< HEAD
         builder: (context, model, child) => Scaffold(
           appBar: AppBar(
@@ -53,6 +55,8 @@ class DraftView extends StatelessWidget {
         ),
         viewModelBuilder: () => DraftViewModel());
 =======
+=======
+>>>>>>> addpeople
 
       builder: (context, model, child) => Scaffold(
         appBar: AppBar(
@@ -73,6 +77,9 @@ class DraftView extends StatelessWidget {
       ),
       viewModelBuilder: () => DraftViewModel(),
     );
+<<<<<<< HEAD
 >>>>>>> upstream/dev
+=======
+>>>>>>> addpeople
   }
 }

@@ -22,6 +22,7 @@ class ChannelPageView extends StatelessWidget {
   final bool? public;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 @FormView(
   fields: [
     FormTextField(name: 'editor'),
@@ -34,6 +35,8 @@ class ChannelPageView extends StatelessWidget with $ChannelPageView {
   static String name = 'general';
 =======
 >>>>>>> upstream/dev
+=======
+>>>>>>> addpeople
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<ChannelPageViewModel>.reactive(
@@ -45,6 +48,7 @@ class ChannelPageView extends StatelessWidget with $ChannelPageView {
       viewModelBuilder: () => ChannelPageViewModel(),
       builder: (context, model, child) {
         return Scaffold(
+<<<<<<< HEAD
 <<<<<<< HEAD
           appBar: appBar(
               '${channelDetail.name}',
@@ -58,6 +62,8 @@ class ChannelPageView extends StatelessWidget with $ChannelPageView {
             scrollDirection: Axis.vertical,
             child: Column(
 =======
+=======
+>>>>>>> addpeople
           appBar: AppBar(
             leading: Padding(
               padding: const EdgeInsets.only(left: 5),
@@ -69,7 +75,10 @@ class ChannelPageView extends StatelessWidget with $ChannelPageView {
             title: Column(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
+<<<<<<< HEAD
 >>>>>>> upstream/dev
+=======
+>>>>>>> addpeople
               children: [
                 Text("#$channelname", style: AppTextStyles.body1Bold),
                 Text(
@@ -91,11 +100,12 @@ class ChannelPageView extends StatelessWidget with $ChannelPageView {
             ],
           ),
           body:
-              // body: model.isLoading
-              //     ? Center(
-              //         child: CircularProgressIndicator(),
-              //       )
-              //     :
+              /*body:
+               model.isLoading
+                   ? Center(
+                    child: CircularProgressIndicator(),
+                 )
+                   :*/
               Column(
             children: [
               Expanded(
@@ -123,6 +133,7 @@ class ChannelPageView extends StatelessWidget with $ChannelPageView {
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 AppBar appBar(
   String text,
@@ -759,3 +770,5 @@ dateBuilder(BuildContext context) {
 // }
 =======
 >>>>>>> upstream/dev
+=======
+>>>>>>> addpeople

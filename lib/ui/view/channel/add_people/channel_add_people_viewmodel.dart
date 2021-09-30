@@ -11,15 +11,19 @@ import 'package:hng/utilities/constants.dart';
 import 'package:hng/utilities/storage_keys.dart';
 import 'package:stacked/stacked.dart';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import 'package:hng/models/static_user_model.dart';
 =======
 >>>>>>> upstream/dev
+=======
+>>>>>>> addpeople
 import 'package:stacked_services/stacked_services.dart';
 
 class ChannelAddPeopleViewModel extends BaseViewModel {
   final organizationApi = OrganizationApiService();
   final storageService = locator<SharedPreferenceLocalStorage>();
+<<<<<<< HEAD
 <<<<<<< HEAD
   final navigationService = locator<NavigationService>();
  // final api = HttpApiService("https://channels.zuri.chat/api/v1");
@@ -31,6 +35,12 @@ class ChannelAddPeopleViewModel extends BaseViewModel {
   String? get token => storageService.getString(StorageKeys.currentSessionToken);
 
 >>>>>>> upstream/dev
+=======
+  final _navigationService = locator<NavigationService>();
+ // final api = HttpApiService("https://channels.zuri.chat/api/v1");
+  final api = HttpApiService(channelsBaseUrl);
+
+>>>>>>> addpeople
   bool get allMarked =>
       markedUsers.length == matchingUsers.length && matchingUsers.isNotEmpty;
 
@@ -66,10 +76,14 @@ class ChannelAddPeopleViewModel extends BaseViewModel {
     }
     setBusy(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
     navigationService.popRepeated(1);
 =======
     _navigationService.popRepeated(1);
 >>>>>>> upstream/dev
+=======
+    _navigationService.popRepeated(1);
+>>>>>>> addpeople
   }
 
  Future <void> addMemberToChannel(String channelId, String userId) async {

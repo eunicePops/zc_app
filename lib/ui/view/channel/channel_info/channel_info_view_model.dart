@@ -47,6 +47,7 @@ class ChannelInfoViewModel extends BaseViewModel {
     _navigationService.navigateTo(Routes.editChannelPageView);
   }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   void navigateToAddPeopleChannel() {
@@ -66,6 +67,15 @@ class ChannelInfoViewModel extends BaseViewModel {
 
   void navigateToMembersList(List<ChannelMembermodel> members, ChannelModel channelDetail) {
 >>>>>>> upstream/dev
+=======
+  //void navigateToAddPeopleChannel() {
+    //_navigationService.navigateTo(Routes.addPeopleView);
+  //}
+
+  navigateToMembersList(
+      List<ChannelMembermodel> members, ChannelModel channelDetail) {
+
+>>>>>>> addpeople
     //NavigationService.navigateTo(Routes.cha)
     _navigationService.navigateToView(ChannelMembersList(
       channelMembers: members,
@@ -111,5 +121,8 @@ class ChannelInfoViewModel extends BaseViewModel {
     }
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> addpeople
 

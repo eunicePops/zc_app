@@ -140,6 +140,7 @@ class HomePageViewModel extends StreamViewModel {
 
     List? channelsList = await channelsApiService.getActiveDms();
 <<<<<<< HEAD
+<<<<<<< HEAD
     channelsList.forEach((data) {
       homePageList.add(HomeItemModel(
         type: HomeItemType.channels,
@@ -151,6 +152,8 @@ class HomePageViewModel extends StreamViewModel {
       ));
     });
 =======
+=======
+>>>>>>> addpeople
 
     channelsList.forEach(
       (data) {
@@ -166,7 +169,11 @@ class HomePageViewModel extends StreamViewModel {
         );
       },
     );
+<<<<<<< HEAD
 >>>>>>> upstream/dev
+=======
+
+>>>>>>> addpeople
 
     //Todo: add channels implementation
 

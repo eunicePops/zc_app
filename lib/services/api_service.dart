@@ -40,10 +40,14 @@ class ApiService {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   Future getAddPeople(body, endpoint, userId, channel_id, org_id) async {
 =======
   Future getAddPeople(body, endpoint, userId, channelId, orgId) async {
 >>>>>>> upstream/dev
+=======
+  Future getAddPeople(body, endpoint, userId, channelId, orgId) async {
+>>>>>>> addpeople
     try {
       final response =
       await _dio.get(apiBaseUrl + endpoint);
