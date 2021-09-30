@@ -10,6 +10,7 @@ class ThreadCardViewModel extends BaseViewModel {
   final _navigationService = locator<NavigationService>();
   final _bottomSheetService = locator<BottomSheetService>();
 
+  // ignore: todo
   //TODO Delete this random number stuff
   //this was created to give the emojis unique ids which  would be handled by the backend
   int randomVarBank = 1000;
@@ -20,7 +21,7 @@ class ThreadCardViewModel extends BaseViewModel {
   }
 
   Future viewProfile() async {
-    var sheetResponse = await _bottomSheetService.showCustomSheet(
+    await _bottomSheetService.showCustomSheet(
       variant: BottomSheetType.user,
       isScrollControlled: true,
     );
@@ -39,6 +40,7 @@ class ThreadCardViewModel extends BaseViewModel {
 
       userPost!.addReaction(
           PostEmojis(id: randomVarBank, postEmoji: emoji, postEmojiCount: 1));
+      // ignore: todo
       //TODO remove this
       randomVarBank += 1;
       notifyListeners();

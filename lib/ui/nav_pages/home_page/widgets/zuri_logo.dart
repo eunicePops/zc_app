@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hng/constants/app_strings.dart';
 import 'package:hng/ui/shared/shared.dart';
 
 import '../../../../utilities/constants.dart';
@@ -17,13 +18,17 @@ class ZuriLogo extends StatelessWidget {
           fit: BoxFit.cover,
           height: 30,
         ),
-        SizedBox(
+        const SizedBox(
           width: 5,
         ),
+<<<<<<< HEAD
         Text(
           'ZURI',
           style: AppTextStyles.zuriAppBarWordLogo
         ),
+=======
+        Text(Zuri, style: AppTextStyles.zuriAppBarWordLogo),
+>>>>>>> upstream/dev
       ],
     );
   }

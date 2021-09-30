@@ -29,7 +29,7 @@ class OrganizationView extends StatelessWidget {
                     child: Visibility(
                       visible: !model.isBusy,
                       child: SingleChildScrollView(
-                        physics: ScrollPhysics(),
+                        physics: const ScrollPhysics(),
                         child: model.organizations.isEmpty
                             ? Center(
                                 child: Container(
@@ -47,19 +47,6 @@ class OrganizationView extends StatelessWidget {
                                     height: MediaQuery.of(context).size.height *
                                         0.005,
                                   ),
-                                  ListView.builder(
-                                    physics:
-                                        const NeverScrollableScrollPhysics(),
-                                    itemCount: model.organizations.length,
-                                    shrinkWrap: true,
-                                    itemBuilder: (context, i) {
-                                     final org = model.organizations[i];
-                                     print (org.id);
-                                     print (org.organizationUrl);
-                                     print (org.name);
-                                      return OrganizationTile(org: org);
-                                    },
-                                  ),
                                 ],
                               ),
                       ),
@@ -70,28 +57,23 @@ class OrganizationView extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Container(
+                  SizedBox(
                     width: double.infinity,
                     child: Column(
                       children: [
                         ListTile(
                           onTap: () => model.navigateToNewOrganization(),
-                          leading: Container(
-                            child: Icon(Icons.add_box_outlined),
-                          ),
-                          title: Text('Add an organization'),
+                          leading: const Icon(Icons.add_box_outlined),
+                          title: const Text('Add an organization'),
                         ),
                         ListTile(
-                          leading: Container(
-                            child: Icon(Icons.settings),
-                          ),
-                          title: Text('Preferences'),
+                          onTap: () => model.viewPreferences(),
+                          leading: const Icon(Icons.settings),
+                          title: const Text('Preferences'),
                         ),
                         ListTile(
-                          leading: Container(
-                            child: Icon(Icons.help_outline),
-                          ),
-                          title: Text('Help'),
+                          leading: const Icon(Icons.help_outline),
+                          title: const Text('Help'),
                         ),
                       ],
                     ),
@@ -122,7 +104,7 @@ class OrganizationTile extends ViewModelWidget<OrganizationViewModel> {
       leading: Container(
         height: MediaQuery.of(context).size.height * 0.06,
         width: MediaQuery.of(context).size.height * 0.06,
-        padding: EdgeInsets.all(2),
+        padding: const EdgeInsets.all(2),
         decoration: BoxDecoration(
           color: model.currentOrgId == org.id
               ? AppColors.blackColor
@@ -142,6 +124,7 @@ class OrganizationTile extends ViewModelWidget<OrganizationViewModel> {
             borderRadius: BorderRadius.circular(5),
           ),
           clipBehavior: Clip.antiAlias,
+          // ignore: todo
           //TODO : Add the org image here
           child: Container(
             height: MediaQuery.of(context).size.height * 0.05,
@@ -150,6 +133,7 @@ class OrganizationTile extends ViewModelWidget<OrganizationViewModel> {
           ),
         ),
       ),
+      // ignore: todo
       //TODO : Add the org name here
       title: Text(
         org.name ?? '',
@@ -167,7 +151,10 @@ class OrganizationTile extends ViewModelWidget<OrganizationViewModel> {
           style: AppTextStyles.body3Medium,
         ),
       ),
-      trailing: GestureDetector(onTap: () {}, child: Icon(Icons.more_vert)),
+      trailing: GestureDetector(
+        onTap: () {},
+        child: const Icon(Icons.more_vert),
+      ),
     );
   }
 }

@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:hng/ui/shared/colors.dart';
 import 'package:hng/ui/shared/styles.dart';
 import 'package:stacked/stacked.dart';
+<<<<<<< HEAD
 
 import 'app/data.dart';
 import 'app/drafted_item_widget.dart';
+=======
+>>>>>>> upstream/dev
 import 'draft_viewmodel.dart';
 
 class DraftView extends StatelessWidget {
@@ -13,6 +16,7 @@ class DraftView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<DraftViewModel>.reactive(
+<<<<<<< HEAD
         builder: (context, model, child) => Scaffold(
           appBar: AppBar(
             backgroundColor: AppColors.whiteColor,
@@ -48,6 +52,27 @@ class DraftView extends StatelessWidget {
           ),
         ),
         viewModelBuilder: () => DraftViewModel());
+=======
+
+      builder: (context, model, child) => Scaffold(
+        appBar: AppBar(
+          title: Text(model.title),
+          leading: const Icon(Icons.arrow_back_ios),
+        ),
+        body: ListView.builder(
+          itemCount: model.draft.length,
+          itemBuilder: (BuildContext context, int index) {
+            return model.draft[index];
+          },
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          tooltip: 'Add draft',
+          child: const Icon(Icons.notes),
+        ),
+      ),
+      viewModelBuilder: () => DraftViewModel(),
+    );
+>>>>>>> upstream/dev
   }
 }
-

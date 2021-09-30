@@ -17,6 +17,7 @@ class ChannelAddPeopleView extends StatelessWidget {
         initialiseSpecialViewModelsOnce: true,
         disposeViewModel: false,
         builder: (context, viewModel, child) => Scaffold(
+          resizeToAvoidBottomInset: false,
           appBar: AppBar(
             title: Text(
               'Add People',
@@ -33,7 +34,7 @@ class ChannelAddPeopleView extends StatelessWidget {
                 size: 24.0,
               ),
               padding: EdgeInsets.zero,
-              onPressed: () {},
+              onPressed: viewModel.navigateBack(),
               iconSize: 32.0,
             ),
             actions: [
@@ -54,20 +55,20 @@ class ChannelAddPeopleView extends StatelessWidget {
           ),
           body: Column(
             children: [
-              SizedBox(height: 24.0),
+              const SizedBox(height: 24.0),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20.0),
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: SearchField(
                   onChanged: viewModel.onSearchUser,
                   labelText: 'Search people to add',
                   // controller: viewModel.editor,
                 ),
               ),
-              SizedBox(height: 16.0),
-              Divider(thickness: 2.0),
-              SizedBox(height: 16.0),
+              const SizedBox(height: 16.0),
+              const Divider(thickness: 2.0),
+              const SizedBox(height: 16.0),
               Padding(
-                padding: EdgeInsets.fromLTRB(20.0, 0.0, 12.0, 0.0),
+                padding: const EdgeInsets.fromLTRB(20.0, 0.0, 12.0, 0.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -77,11 +78,13 @@ class ChannelAddPeopleView extends StatelessWidget {
                         Text(
                           'Add Everyone',
                           style: GoogleFonts.lato(
-                            color: Color(0xFF242424),
+                            // ignore: todo
+                            //TODO change color to brand
+                            color: const Color(0xFF242424),
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        SizedBox(height: 4.0),
+                        const SizedBox(height: 4.0),
                         Text(
                           'Everyone will be added to this channel',
                           style: GoogleFonts.lato(
@@ -94,12 +97,13 @@ class ChannelAddPeopleView extends StatelessWidget {
                     ),
                     Checkbox(
                       onChanged: viewModel.onMarkAll,
-                      side: BorderSide(width: 0.96),
+                      side: const BorderSide(width: 0.96),
                       value: viewModel.allMarked,
                     ),
                   ],
                 ),
               ),
+
               SizedBox(height: 16.0),
               Divider(thickness: 2.0),
               Expanded(
@@ -147,7 +151,11 @@ class ChannelAddPeopleView extends StatelessWidget {
                         side: BorderSide(width: 0.96),
                       )
                     ],
+<<<<<<< HEAD
                   ),
+=======
+                  )
+>>>>>>> upstream/dev
                 ),
               ),
             ],

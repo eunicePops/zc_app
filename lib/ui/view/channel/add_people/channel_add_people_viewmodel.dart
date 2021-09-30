@@ -1,21 +1,36 @@
 import 'package:hng/app/app.locator.dart';
 import 'package:hng/models/user_search_model.dart';
+<<<<<<< HEAD
 import 'package:hng/package/base/server-request/api/http_api.dart';
+=======
+import 'package:hng/package/base/server-request/api/zuri_api.dart';
+>>>>>>> upstream/dev
 import 'package:hng/package/base/server-request/organization_request/organization_api_service.dart';
 import 'package:hng/services/local_storage_services.dart';
 import 'package:hng/utilities/constants.dart';
 import 'package:hng/utilities/storage_keys.dart';
 import 'package:stacked/stacked.dart';
+<<<<<<< HEAD
 
 import 'package:hng/models/static_user_model.dart';
+=======
+>>>>>>> upstream/dev
 import 'package:stacked_services/stacked_services.dart';
 
 class ChannelAddPeopleViewModel extends BaseViewModel {
   final organizationApi = OrganizationApiService();
   final storageService = locator<SharedPreferenceLocalStorage>();
+<<<<<<< HEAD
   final navigationService = locator<NavigationService>();
  // final api = HttpApiService("https://channels.zuri.chat/api/v1");
   final api = HttpApiService(channelsBaseUrl);
+=======
+  final _navigationService = locator<NavigationService>();
+  final api = ZuriApi(channelsBaseUrl);
+
+  String? get token => storageService.getString(StorageKeys.currentSessionToken);
+
+>>>>>>> upstream/dev
   bool get allMarked =>
       markedUsers.length == matchingUsers.length && matchingUsers.isNotEmpty;
 
@@ -27,6 +42,7 @@ class ChannelAddPeopleViewModel extends BaseViewModel {
 
   ];
 
+  navigateBack() => _navigationService.popRepeated(1);
   void onSearchUser(String input) {
 
     matchingUsers = [
@@ -49,15 +65,24 @@ class ChannelAddPeopleViewModel extends BaseViewModel {
       print(user.id);
     }
     setBusy(false);
+<<<<<<< HEAD
     navigationService.popRepeated(1);
+=======
+    _navigationService.popRepeated(1);
+>>>>>>> upstream/dev
   }
 
  Future <void> addMemberToChannel(String channelId, String userId) async {
     await api.post(
       "/$orgId/channels/$channelId/members/",
     //  "/614679ee1a5607b13c00bcb7/channels/$channelId/members/",
+<<<<<<< HEAD
       headers: {'Authorization': 'Bearer ${organizationApi.token}',"Content-Type": "application/json",},
       data: {"_id":userId, "role_id": "",
+=======
+      token: token,
+      body: {"_id":userId, "role_id": "",
+>>>>>>> upstream/dev
         "is_admin": false,
         "notifications": {
           "additionalProp1": "",
@@ -82,3 +107,4 @@ class ChannelAddPeopleViewModel extends BaseViewModel {
 
   String? get orgId => storageService.getString(StorageKeys.currentOrgId);
 }
+
